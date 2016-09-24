@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Spring3HibernateApp</groupId>
@@ -61,7 +62,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>2.5.2</version>
+				<version>3.0.0</version>
 				<configuration>
 					<!-- Enables analysis which takes more memory but finds more bugs. If 
 						you run out of memory, changes the value of the effort element to 'Low'. -->
@@ -86,6 +87,25 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+                                <groupId>external.atlassian.jgitflow</groupId>
+                                <artifactId>jgitflow-maven-plugin</artifactId>
+               			<version>1.0-m4.3</version>
+               			<configuration>
+                  		<pushReleases>true</pushReleases>
+                  		<keepBranch>false</keepBranch>
+                  		<noTag>true</noTag>
+                  		<autoVersionSubmodules>true</autoVersionSubmodules>
+                  		<allowUntracked>true</allowUntracked>
+		  		<pullDevelop>true</pullDevelop>
+                  		<pullMaster>true</pullMaster> 
+                  		<allowSnapshots>true</allowSnapshots>                 
+		  		<flowInitContext>
+                     		<masterBranchName>master-aman</masterBranchName>
+                     		<developBranchName>dev-aman</developBranchName>
+                  		</flowInitContext>
+               			</configuration>
+            		</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
@@ -142,10 +162,15 @@
 			</plugin>
 		</plugins>
 	</build>
-	<version>1.6</version>
+	<version>1.10</version>
 	<name>Spring3HibernateApp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+            <dependency>
+    <groupId>net.masterthought</groupId>
+    <artifactId>cucumber-reporting</artifactId>
+    <version>2.2.0</version>
+</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
