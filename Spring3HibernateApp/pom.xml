@@ -16,12 +16,12 @@
    <repository>
      <id>central</id>
      <name>central</name>
-     <url>http://devserver.lybrate.com:8081/artifactory/libs-release-local</url>
+     <url>http://192.168.0.37:8081/artifactory/ext-release-local</url>
    </repository>
 	<snapshotRepository>
           <id>snapshots</id>
           <name>libs-snapshot-local</name>
-          <url>http://devserver.lybrate.com:8081/artifactory/libs-snapshot-local</url>
+          <url>http://192.168.0.37:8081/artifactory/ext-snapshot-local</url>
         </snapshotRepository>
 	
  </distributionManagement>
@@ -142,7 +142,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	<version>1.6-SNAPSHOT</version>
+	<version>1.6</version>
 	<name>Spring3HibernateApp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
