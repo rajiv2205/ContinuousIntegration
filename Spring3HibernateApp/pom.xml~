@@ -16,12 +16,12 @@
    <repository>
      <id>central</id>
      <name>central</name>
-     <url>http://192.168.0.37:8081/artifactory/ext-release-local</url>
+     <url>http://devserver.lybrate.com:8081/artifactory/libs-release-local</url>
    </repository>
 	<snapshotRepository>
           <id>snapshots</id>
           <name>libs-snapshot-local</name>
-          <url>http://192.168.0.37:8081/artifactory/ext-snapshot-local</url>
+          <url>http://devserver.lybrate.com:8081/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
 	
  </distributionManagement>
@@ -396,7 +396,7 @@
 			<version>3.0.0.GA</version>
 		</dependency>
 
-		<!-- Spring Dependancies-->
+		<!-- Spring Dependancy -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
